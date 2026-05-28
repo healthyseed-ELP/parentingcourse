@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-    
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
 
         :root {
@@ -50,9 +49,7 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
     <nav class="glass-nav fixed top-0 left-0 w-full z-50 px-6 md:px-12 h-20 flex justify-between items-center shadow-sm">
-        <!-- 左側 Logo -->
         <div class="flex items-center">
             <a href="index.html" class="block py-1">
                 <img src="HSP_Logo_New_VisualGuid-02.png" 
@@ -61,7 +58,6 @@
             </a>
         </div>
 
-        <!-- 右側選單（對齊影像 image_ba1a09.png） -->
         <div class="hidden md:flex items-center space-x-8 font-bold text-gray-700">
             <a href="#courses" class="hover:text-brand-green transition-colors">課程</a>
             <a href="#" class="hover:text-brand-green transition-colors">關於我們</a>
@@ -69,7 +65,6 @@
             <button class="bg-brand-green text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all font-bold">立即登入</button>
         </div>
 
-        <!-- 手機版漢堡選單 -->
         <div class="md:hidden flex items-center">
             <input type="checkbox" id="menu-toggle" class="hidden">
             <label for="menu-toggle" class="p-2 cursor-pointer text-gray-600"><i class="fas fa-bars text-xl"></i></label>
@@ -82,14 +77,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section (主視覺區) -->
     <header class="pt-32 pb-16 md:pt-44 md:pb-24 px-6 md:px-12 bg-gradient-to-b from-white to-[#F8FAFB]">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             
-            <!-- 左側文字區 -->
-                </span>
+            <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
                 <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
-                    慈慧幼苗家長學堂 <br><span class="text-brand-green"></span>
+                    慈慧幼苗<br><span class="text-brand-green">家長教育平台</span>
                 </h1>
                 <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mb-8 mx-auto lg:mx-0">
                     「追求成長，與孩同行」— 我們為 0-6 歲孩子的家長提供最具實證支持的專業教育課程。
@@ -101,10 +94,8 @@
                 </div>
             </div>
             
-            <!-- 右側：已換成可自由上傳 Banner 嘅位置 -->
             <div class="flex-1 w-full order-1 lg:order-2">
                 <div class="w-full aspect-[16/10] bg-gray-100 rounded-[32px] overflow-hidden shadow-xl border border-gray-200/60 group relative">
-                    <!-- 預留給你的 Banner 圖片位置 -->
                     <img src="hero-banner.jpg" 
                          alt="慈慧幼苗 家長教育平台精選活動" 
                          class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
@@ -115,11 +106,9 @@
         </div>
     </header>
 
-    <!-- 精選課程 Section -->
     <section id="courses" class="py-20 px-6 md:px-12 bg-white rounded-t-[50px] shadow-[0_-15px_40px_rgba(0,0,0,0.01)]">
         <div class="max-w-7xl mx-auto">
             
-            <!-- 區塊標題區 -->
             <div class="flex justify-between items-end mb-12 border-b pb-4">
                 <div>
                     <h2 class="text-3xl font-black text-gray-900 relative pb-2">
@@ -132,10 +121,8 @@
                 </div>
             </div>
 
-            <!-- 4張課程卡片網格 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- 卡片 1：正向育兒樂 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
                     <div class="h-44 overflow-hidden relative">
                         <img src="course1.jpg" alt="正向育兒樂" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=600'">
@@ -150,7 +137,6 @@
                     </div>
                 </div>
 
-                <!-- 卡片 2：幼兒學前概念 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
                     <div class="h-44 overflow-hidden relative">
                         <img src="course2.jpg" alt="幼兒學前概念" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600'">
@@ -165,7 +151,6 @@
                     </div>
                 </div>
 
-                <!-- 卡片 3：語言發展 (Coming Soon) -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
                     <div class="h-44 overflow-hidden relative">
                         <img src="course3.jpg" alt="語言發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600'">
@@ -183,7 +168,6 @@
                     </div>
                 </div>
 
-                <!-- 卡片 4：專注力發展 (即將推出) -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
                     <div class="h-44 overflow-hidden relative">
                         <img src="course4.jpg" alt="專注力發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1510172951991-856a654063f9?auto=format&fit=crop&q=80&w=600'">
@@ -201,6 +185,9 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
             </div>
         </div>
     </section>

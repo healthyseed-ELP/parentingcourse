@@ -117,20 +117,21 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="glass-nav fixed w-full top-0 z-[100]">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
-            <div class="flex items-center">
-                <a href="index.html" class="block py-1">
-                    <img src="HSP_Logo_New_VisualGuid-02.png" alt="慈慧幼苗 Healthy Seed" class="h-12 md:h-14 w-auto object-contain">
-                </a>
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-brand-green rounded-xl flex items-center justify-center text-white shadow-lg">
+                    <i class="fas fa-seedling text-xl"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-brand-green">慈慧幼苗 Healthy Seed</span>
             </div>
 
             <div class="hidden md:flex items-center space-x-10 font-bold">
                 <a href="#courses" class="text-gray-600 hover:text-brand-green transition-colors">課程</a>
                 <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">關於我們</a>
                 <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">家長資源</a>
-                <button class="bg-brand-green text-white px-7 py-2.5 rounded-full hover:shadow-lg transition-all transform hover:scale-105">登記/登入</button>
+                <button class="bg-brand-green text-white px-7 py-2.5 rounded-full hover:shadow-lg transition-all transform hover:scale-105">立即登入</button>
             </div>
 
             <div class="md:hidden">
@@ -146,12 +147,13 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="pt-32 pb-16 md:pt-48 md:pb-32 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 text-center md:text-left">
                 <span class="inline-block px-4 py-1 bg-green-100 text-brand-green font-black rounded-full text-xs uppercase tracking-widest mb-6">Parenting with Love</span>
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 leading-tight mb-8">
-                    慈慧幼苗<br><span class="text-brand-green">家長學堂</span>
+                    慈慧幼苗<br><span class="text-brand-green">家長教育平台</span>
                 </h1>
                 <p class="text-gray-500 text-lg md:text-xl leading-relaxed max-w-xl mb-10">
                     「追求成長，與孩同行」— 我們為 0-6 歲孩子的家長提供最具實證支持的專業教育課程。
@@ -170,6 +172,7 @@
         </div>
     </header>
 
+    <!-- 精選課程區 -->
     <section id="courses" class="py-24 bg-white rounded-t-[60px] shadow-[0_-20px_50px_rgba(0,0,0,0.02)]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -184,7 +187,11 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 
-                <div class="course-card border border-gray-100 overflow-hidden">
+                <!-- 卡片 1 (已推出) -->
+                <div class="course-card border border-gray-50 overflow-hidden">
+                    <div class="h-44 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&q=80&w=400" alt="正向育兒" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="mb-3">
                             <span class="age-badge bg-blue-50 text-blue-500">
@@ -197,7 +204,11 @@
                     </div>
                 </div>
 
-                <div class="course-card border border-gray-100 overflow-hidden">
+                <!-- 卡片 2 (已推出) -->
+                <div class="course-card border border-gray-50 overflow-hidden">
+                    <div class="h-44 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=400" alt="學前概念" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                    </div>
                     <div class="p-8 flex flex-col flex-grow">
                         <div class="mb-3">
                             <span class="age-badge bg-green-50 text-green-600">
@@ -210,15 +221,21 @@
                     </div>
                 </div>
 
+                <!-- 卡片 3 (即將推出) -->
                 <div class="course-card coming-soon-card overflow-hidden">
+                    <div class="h-44 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" alt="語言發展" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 z-[5]">
+                            <span class="pulse-badge bg-brand-orange text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg">COMING SOON</span>
+                        </div>
+                    </div>
                     <div class="p-8 flex flex-col flex-grow relative z-[5]">
-                        <div class="mb-3 flex items-center justify-between gap-2">
+                        <div class="mb-3">
                             <span class="age-badge bg-blue-50 text-blue-500">
                                 <i class="fas fa-child-reaching"></i> 適合 0-6 歲家長
                             </span>
-                            <span class="pulse-badge bg-brand-orange text-white px-3 py-1 rounded-full text-[10px] font-black shadow-md">COMING SOON</span>
                         </div>
-                        <div class="flex items-center gap-2 mb-3 h-14">
+                        <div class="flex items-center gap-2 mb-3">
                             <h3 class="text-xl font-black text-gray-800">語言發展</h3>
                             <i class="fas fa-clock text-brand-orange animate-pulse"></i>
                         </div>
@@ -229,15 +246,21 @@
                     </div>
                 </div>
 
+                <!-- 卡片 4 (即將推出) -->
                 <div class="course-card coming-soon-card overflow-hidden">
+                    <div class="h-44 bg-gray-100 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&q=80&w=400" alt="專注力" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 z-[5]">
+                            <span class="pulse-badge bg-brand-orange text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg">即將推出</span>
+                        </div>
+                    </div>
                     <div class="p-8 flex flex-col flex-grow relative z-[5]">
-                        <div class="mb-3 flex items-center justify-between gap-2">
+                        <div class="mb-3">
                             <span class="age-badge bg-blue-50 text-blue-500">
                                 <i class="fas fa-child-reaching"></i> 適合 0-6 歲家長
                             </span>
-                            <span class="pulse-badge bg-brand-orange text-white px-3 py-1 rounded-full text-[10px] font-black shadow-md">即將推出</span>
                         </div>
-                        <div class="flex items-center gap-2 mb-3 h-14">
+                        <div class="flex items-center gap-2 mb-3">
                             <h3 class="text-xl font-black text-gray-800">專注力發展</h3>
                             <i class="fas fa-brain text-brand-orange animate-pulse"></i>
                         </div>
@@ -252,6 +275,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-[#1A1A1A] text-white py-20">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
             <div class="col-span-1 md:col-span-2">

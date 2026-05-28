@@ -23,91 +23,23 @@
             scroll-behavior: smooth;
         }
 
+        /* 導航欄毛玻璃效果 */
         .glass-nav {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
         }
 
+        /* 自定義顏色類別 */
         .bg-brand-green { background-color: var(--primary-green); }
-        .bg-brand-orange { background-color: var(--accent-orange); }
         .text-brand-green { color: var(--primary-green); }
+        .bg-brand-orange { background-color: var(--accent-orange); }
         .text-brand-orange { color: var(--accent-orange); }
-
-        /* 有機形狀動畫 */
-        .organic-shape {
-            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-            background: linear-gradient(135deg, #e1eedd 0%, #ffffff 100%);
-            box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
-            animation: morphing 8s ease-in-out infinite;
-        }
-
-        @keyframes morphing {
-            0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-            50% { border-radius: 35% 65% 65% 35% / 45% 55% 45% 55%; }
-            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-        }
-
-        /* 課程卡片 */
-        .course-card {
-            border-radius: 24px;
-            background: #ffffff;
-            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .course-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px -12px rgba(104, 176, 77, 0.15);
-        }
-
-        /* 即將推出專屬效果 */
-        .coming-soon-card {
-            border: 2px dashed #FFD8B3;
-            background: linear-gradient(to bottom, #ffffff, #fffdfa);
-        }
-
-        .coming-soon-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: grayscale(0.3);
-            pointer-events: none;
-            z-index: 2;
-            border-radius: 24px;
-            transition: opacity 0.3s;
-        }
-
-        .coming-soon-card:hover::before {
-            opacity: 0;
-        }
-
-        .pulse-badge {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 159, 67, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 159, 67, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 159, 67, 0); }
-        }
-
-        .btn-orange-gradient {
-            background: linear-gradient(135deg, #FF9F43 0%, #FF7F00 100%);
-        }
-
-        .age-badge {
-            font-size: 0.75rem;
-            padding: 2px 10px;
-            border-radius: 99px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
+        
+        /* 課程卡片即將推出款式的虛線邊框 */
+        .dashed-orange-border {
+            border: 2px dashed rgba(255, 159, 67, 0.4);
         }
 
         #menu-toggle:checked ~ #mobile-menu {
@@ -118,196 +50,162 @@
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="glass-nav fixed w-full top-0 z-[100]">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-brand-green rounded-xl flex items-center justify-center text-white shadow-lg">
-                    <i class="fas fa-seedling text-xl"></i>
-                </div>
-                <span class="text-xl font-bold tracking-tight text-brand-green">慈慧幼苗 Healthy Seed</span>
-            </div>
+    <nav class="glass-nav fixed top-0 left-0 w-full z-50 px-6 md:px-12 h-20 flex justify-between items-center shadow-sm">
+        <!-- 左側 Logo -->
+        <div class="flex items-center">
+            <a href="index.html" class="block py-1">
+                <img src="HSP_Logo_New_VisualGuid-02.png" 
+                     alt="慈慧幼苗 Healthy Seed" 
+                     class="h-14 md:h-16 w-auto object-contain">
+            </a>
+        </div>
 
-            <div class="hidden md:flex items-center space-x-10 font-bold">
-                <a href="#courses" class="text-gray-600 hover:text-brand-green transition-colors">課程</a>
-                <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">關於我們</a>
-                <a href="#" class="text-gray-600 hover:text-brand-green transition-colors">家長資源</a>
-                <button class="bg-brand-green text-white px-7 py-2.5 rounded-full hover:shadow-lg transition-all transform hover:scale-105">立即登入</button>
-            </div>
+        <!-- 右側選單（對齊影像 image_ba1a09.png） -->
+        <div class="hidden md:flex items-center space-x-8 font-bold text-gray-700">
+            <a href="#courses" class="hover:text-brand-green transition-colors">課程</a>
+            <a href="#" class="hover:text-brand-green transition-colors">關於我們</a>
+            <a href="#" class="hover:text-brand-green transition-colors">家長資源</a>
+            <button class="bg-brand-green text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all font-bold">立即登入</button>
+        </div>
 
-            <div class="md:hidden">
-                <input type="checkbox" id="menu-toggle" class="hidden">
-                <label for="menu-toggle" class="p-2 cursor-pointer"><i class="fas fa-bars text-2xl text-gray-600"></i></label>
-                <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white flex-col p-6 space-y-4 shadow-xl font-bold">
-                    <a href="#courses" class="py-2 border-b">課程</a>
-                    <a href="#" class="py-2 border-b">關於我們</a>
-                    <a href="#" class="py-2 border-b">家長資源</a>
-                    <button class="bg-brand-green text-white py-3 rounded-xl">立即登入</button>
-                </div>
+        <!-- 手機版漢堡選單 -->
+        <div class="md:hidden flex items-center">
+            <input type="checkbox" id="menu-toggle" class="hidden">
+            <label for="menu-toggle" class="p-2 cursor-pointer text-gray-600"><i class="fas fa-bars text-xl"></i></label>
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white flex-col p-6 space-y-4 shadow-xl font-bold z-50">
+                <a href="#courses" class="py-2 border-b">課程</a>
+                <a href="#" class="py-2 border-b">關於我們</a>
+                <a href="#" class="py-2 border-b">家長資源</a>
+                <button class="bg-brand-green text-white py-3 rounded-xl w-full">立即登入</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="pt-32 pb-16 md:pt-48 md:pb-32 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="flex-1 text-center md:text-left">
-                <span class="inline-block px-4 py-1 bg-green-100 text-brand-green font-black rounded-full text-xs uppercase tracking-widest mb-6">Parenting with Love</span>
-                <h1 class="text-5xl md:text-7xl font-black text-gray-900 leading-tight mb-8">
+    <!-- Hero Section (主視覺區) -->
+    <header class="pt-32 pb-16 md:pt-44 md:pb-24 px-6 md:px-12 bg-gradient-to-b from-white to-[#F8FAFB]">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            
+            <!-- 左側文字區 -->
+            <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
+                <span class="inline-block px-4 py-1 bg-green-100 text-brand-green font-black rounded-full mb-4 text-xs uppercase tracking-wider">
+                    Parenting with Love
+                </span>
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
                     慈慧幼苗<br><span class="text-brand-green">家長教育平台</span>
                 </h1>
-                <p class="text-gray-500 text-lg md:text-xl leading-relaxed max-w-xl mb-10">
+                <p class="text-gray-500 text-base md:text-lg leading-relaxed max-w-xl mb-8 mx-auto lg:mx-0">
                     「追求成長，與孩同行」— 我們為 0-6 歲孩子的家長提供最具實證支持的專業教育課程。
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#courses" class="bg-brand-green text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center">
-                        瀏覽所有課程 <i class="fas fa-search ml-3"></i>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#courses" class="bg-brand-green text-white px-8 py-3.5 rounded-full flex items-center justify-center font-bold hover:shadow-lg transition shadow-md">
+                        瀏覽所有課程 <i class="fas fa-search ml-2"></i>
                     </a>
                 </div>
             </div>
-            <div class="flex-1 relative">
-                <div class="organic-shape w-full max-w-[500px] aspect-square flex items-center justify-center overflow-hidden mx-auto p-4 relative">
-                    <img src="https://images.unsplash.com/photo-1543333309-8742245a1c58?auto=format&fit=crop&q=80&w=800" alt="家長與孩子" class="w-full h-full object-cover rounded-[inherit]">
+            
+            <!-- 右側：已換成可自由上傳 Banner 嘅位置 -->
+            <div class="flex-1 w-full order-1 lg:order-2">
+                <div class="w-full aspect-[16/10] bg-gray-100 rounded-[32px] overflow-hidden shadow-xl border border-gray-200/60 group relative">
+                    <!-- 預留給你的 Banner 圖片位置 -->
+                    <img src="hero-banner.jpg" 
+                         alt="慈慧幼苗 家長教育平台精選活動" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'absolute inset-0 flex flex-col items-center justify-center text-gray-400 p-6 text-center\'><i class=\'far fa-image text-5xl mb-3 text-gray-300\'></i><p class=\'font-bold text-sm\'>預留 Banner 位置</p><p class=\'text-xs mt-1 text-gray-400\'>請上傳名為 <b>hero-banner.jpg</b> 嘅圖片至 GitHub 資料夾</p></div>';">
                 </div>
             </div>
+
         </div>
     </header>
 
-    <!-- 精選課程區 -->
-    <section id="courses" class="py-24 bg-white rounded-t-[60px] shadow-[0_-20px_50px_rgba(0,0,0,0.02)]">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div class="text-center md:text-left">
-                    <h2 class="text-4xl font-black text-gray-900 mb-4">
-                        精選課程 <span class="text-brand-orange">.</span>
+    <!-- 精選課程 Section -->
+    <section id="courses" class="py-20 px-6 md:px-12 bg-white rounded-t-[50px] shadow-[0_-15px_40px_rgba(0,0,0,0.01)]">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- 區塊標題區 -->
+            <div class="flex justify-between items-end mb-12 border-b pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 relative pb-2">
+                        精選課程
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-brand-orange rounded-full"></span>
                     </h2>
-                    <div class="w-24 h-2 bg-brand-orange rounded-full mx-auto md:mx-0"></div>
                 </div>
-                <p class="text-gray-400 font-medium">陪伴您掌握育兒關鍵時刻</p>
+                <div class="text-gray-400 text-sm md:text-base font-medium">
+                    陪伴您掌握育兒關鍵時刻
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- 4張課程卡片網格 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <!-- 卡片 1 (已推出) -->
-                <div class="course-card border border-gray-50 overflow-hidden">
-                    <div class="h-44 bg-gray-100 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&q=80&w=400" alt="正向育兒" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <!-- 卡片 1：正向育兒樂 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course1.jpg" alt="正向育兒樂" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
+                    <div class="p-6 flex flex-col flex-grow">
                         <div class="mb-3">
-                            <span class="age-badge bg-blue-50 text-blue-500">
-                                <i class="fas fa-child-reaching"></i> 適合 0-6 歲家長
-                            </span>
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
                         </div>
-                        <h3 class="text-xl font-black text-gray-900 mb-3 h-14">正向育兒樂：<br>家長管教課程</h3>
-                        <p class="text-gray-400 text-sm mb-8 leading-relaxed">建立和諧親子關係，學習有效且正面的溝通管教技巧。</p>
-                        <button class="w-full bg-brand-green text-white mt-auto py-3.5 rounded-2xl font-bold shadow-lg hover:shadow-green-200 transition-all">參與課程</button>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center">正向育兒樂：家長管教課程</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">建立和諧親子關係，學習有效且正面的溝通管教技巧。</p>
+                        <button class="w-full py-3 bg-brand-green text-white font-bold rounded-xl hover:opacity-90 transition">參與課程</button>
                     </div>
                 </div>
 
-                <!-- 卡片 2 (已推出) -->
-                <div class="course-card border border-gray-50 overflow-hidden">
-                    <div class="h-44 bg-gray-100 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=400" alt="學前概念" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                <!-- 卡片 2：幼兒學前概念 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course2.jpg" alt="幼兒學前概念" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600'">
                     </div>
-                    <div class="p-8 flex flex-col flex-grow">
+                    <div class="p-6 flex flex-col flex-grow">
                         <div class="mb-3">
-                            <span class="age-badge bg-green-50 text-green-600">
-                                <i class="fas fa-school"></i> 適合 2-3 歲家長
-                            </span>
+                            <span class="text-xs font-bold px-3 py-1 bg-green-50 text-brand-green rounded-full">適合 2-3 歲家長</span>
                         </div>
-                        <h3 class="text-xl font-black text-gray-900 mb-3 h-14">幼兒學前概念</h3>
-                        <p class="text-gray-400 text-sm mb-8 leading-relaxed">深入了解幼兒早期認知發展，助孩子輕鬆銜接學前生活。</p>
-                        <button class="w-full bg-brand-green text-white mt-auto py-3.5 rounded-2xl font-bold shadow-lg hover:shadow-green-200 transition-all">參與課程</button>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center">幼兒學前概念</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">深入了解幼兒早期認知發展，助孩子輕鬆銜接學前生活。</p>
+                        <button class="w-full py-3 bg-brand-green text-white font-bold rounded-xl hover:opacity-90 transition">參與課程</button>
                     </div>
                 </div>
 
-                <!-- 卡片 3 (即將推出) -->
-                <div class="course-card coming-soon-card overflow-hidden">
-                    <div class="h-44 bg-gray-100 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" alt="語言發展" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 z-[5]">
-                            <span class="pulse-badge bg-brand-orange text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg">COMING SOON</span>
-                        </div>
+                <!-- 卡片 3：語言發展 (Coming Soon) -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course3.jpg" alt="語言發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">Coming Soon</span>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow relative z-[5]">
+                    <div class="p-6 flex flex-col flex-grow">
                         <div class="mb-3">
-                            <span class="age-badge bg-blue-50 text-blue-500">
-                                <i class="fas fa-child-reaching"></i> 適合 0-6 歲家長
-                            </span>
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
                         </div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-black text-gray-800">語言發展</h3>
-                            <i class="fas fa-clock text-brand-orange animate-pulse"></i>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-8 leading-relaxed font-medium">解鎖孩子的語言天賦，掌握啟發幼兒表達與溝通的關鍵。</p>
-                        <button class="w-full btn-orange-gradient text-white mt-auto py-3.5 rounded-2xl font-bold shadow-xl hover:shadow-orange-200 transition-all">
-                            立即預約登記
-                        </button>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center gap-2">
+                            語言發展 <span class="text-brand-orange text-base"><i class="far fa-clock"></i></span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">解鎖孩子的語言天賦，掌握啟發幼兒表達與溝通的關鍵。</p>
+                        <button class="w-full py-3 bg-brand-orange text-white font-bold rounded-xl hover:opacity-90 transition">立即預約登記</button>
                     </div>
                 </div>
 
-                <!-- 卡片 4 (即將推出) -->
-                <div class="course-card coming-soon-card overflow-hidden">
-                    <div class="h-44 bg-gray-100 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?auto=format&fit=crop&q=80&w=400" alt="專注力" class="w-full h-full object-cover">
-                        <div class="absolute top-4 right-4 z-[5]">
-                            <span class="pulse-badge bg-brand-orange text-white px-4 py-1.5 rounded-full text-xs font-black shadow-lg">即將推出</span>
-                        </div>
+                <!-- 卡片 4：專注力發展 (即將推出) -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course4.jpg" alt="專注力發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1510172951991-856a654063f9?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow">即將推出</span>
                     </div>
-                    <div class="p-8 flex flex-col flex-grow relative z-[5]">
+                    <div class="p-6 flex flex-col flex-grow">
                         <div class="mb-3">
-                            <span class="age-badge bg-blue-50 text-blue-500">
-                                <i class="fas fa-child-reaching"></i> 適合 0-6 歲家長
-                            </span>
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
                         </div>
-                        <div class="flex items-center gap-2 mb-3">
-                            <h3 class="text-xl font-black text-gray-800">專注力發展</h3>
-                            <i class="fas fa-brain text-brand-orange animate-pulse"></i>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-8 leading-relaxed font-medium">提升孩子專注力，培養持久學習的習慣，探索專注的秘密。</p>
-                        <button class="w-full btn-orange-gradient text-white mt-auto py-3.5 rounded-2xl font-bold shadow-xl hover:shadow-orange-200 transition-all">
-                            獲取開課通知
-                        </button>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center gap-2">
+                            專注力發展 <span class="text-brand-orange text-base"><i class="fas fa-brain"></i></span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">提升孩子專注力，培養持久學習的習慣，探索專注的秘密。</p>
+                        <button class="w-full py-3 bg-brand-orange text-white font-bold rounded-xl hover:opacity-90 transition">獲取開課通知</button>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-[#1A1A1A] text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
-            <div class="col-span-1 md:col-span-2">
-                <div class="flex items-center space-x-2 mb-8">
-                    <i class="fas fa-seedling text-brand-green text-3xl"></i>
-                    <span class="text-2xl font-black">慈慧幼苗 Healthy Seed</span>
-                </div>
-                <p class="text-gray-500 max-w-sm leading-loose font-medium">
-                    專為 0-6 歲孩子的家長打造。致力於提供最貼近本地家庭需求的教養資源，陪伴家長解決育兒痛點。
-                </p>
-            </div>
-            <div>
-                <h4 class="font-black text-lg mb-8 tracking-wider">資源與支援</h4>
-                <ul class="space-y-4 text-gray-400 font-medium">
-                    <li><a href="#" class="hover:text-brand-green transition">關於我們</a></li>
-                    <li><a href="#" class="hover:text-brand-green transition">育兒百科</a></li>
-                    <li><a href="#" class="hover:text-brand-green transition">服務據點</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-black text-lg mb-8 tracking-wider">關注我們</h4>
-                <div class="flex space-x-5">
-                    <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-bold tracking-widest">
-            &copy; 2026 HEALTHY SEED. ALL RIGHTS RESERVED.
-        </div>
-    </footer>
 
 </body>
 </html>

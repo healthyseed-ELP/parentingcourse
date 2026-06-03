@@ -59,9 +59,7 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-8 font-bold text-gray-700">
-            <a href="#courses" class="hover:text-brand-green transition-colors">課程</a>
-            <a href="#testimonials" class="hover:text-brand-green transition-colors">用戶分享</a>
-            <a href="#media" class="hover:text-brand-green transition-colors">媒體報道</a>
+            <a href="#mainpage" class="hover:text-brand-green transition-colors">回到首頁</a>
             <button class="bg-brand-green text-white px-6 py-2.5 rounded-full hover:opacity-90 transition-all font-bold">立即登記/登入</button>
         </div>
 
@@ -94,4 +92,239 @@
                 </div>
             </div>
             
-            <div class="flex
+            <div class="flex-1 w-full order-1 lg:order-2">
+                <div class="w-full aspect-video bg-gray-100 rounded-[32px] overflow-hidden shadow-xl border border-gray-200/60 relative">
+                    <iframe class="w-full h-full" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="慈慧幼苗 Healthy Seed 宣傳影片" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section id="courses" class="py-20 px-6 md:px-12 bg-white rounded-t-[50px] shadow-[0_-15px_40px_rgba(0,0,0,0.01)]">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex justify-between items-end mb-12 border-b pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 relative pb-2">
+                        精選課程
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-brand-orange rounded-full"></span>
+                    </h2>
+                </div>
+                <div class="text-gray-400 text-sm md:text-base font-medium">
+                    陪伴您掌握育兒關鍵時刻
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course1.jpg" alt="正向育兒樂" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center">正向育兒樂：家長管教課程</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">建立和諧親子關係，學習有效且正面的溝通管教技巧。</p>
+                        <button class="w-full py-3 bg-brand-green text-white font-bold rounded-xl hover:opacity-90 transition">參與課程</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-100">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course2.jpg" alt="幼兒啓蒙課程" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-green-50 text-brand-green rounded-full">適合 2-3 歲家長</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center">幼兒學前概念</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">深入了解幼兒早期認知發展，助孩子輕鬆銜接學前生活。</p>
+                        <button class="w-full py-3 bg-brand-green text-white font-bold rounded-xl hover:opacity-90 transition">參與課程</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course3.jpg" alt="語言發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">即將推出</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center gap-2">
+                            語言發展 <span class="text-brand-orange text-base"><i class="far fa-clock"></i></span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">解鎖孩子的語言天賦，掌握啟發幼兒表達與溝通的關鍵。</p>
+                        <button class="w-full py-3 bg-brand-orange text-white font-bold rounded-xl hover:opacity-90 transition">獲取開課通知</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full dashed-orange-border">
+                    <div class="h-44 overflow-hidden relative">
+                        <img src="course4.jpg" alt="專注力發展" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1510172951991-856a654063f9?auto=format&fit=crop&q=80&w=600'">
+                        <span class="absolute top-3 right-3 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full shadow">即將推出</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="mb-3">
+                            <span class="text-xs font-bold px-3 py-1 bg-blue-50 text-blue-500 rounded-full">適合 0-6 歲家長</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 text-gray-900 h-12 flex items-center gap-2">
+                            專注力發展 <span class="text-brand-orange text-base"><i class="fas fa-brain"></i></span>
+                        </h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">提升孩子專注力，培養持久學習的習慣，探索專注的秘密。</p>
+                        <button class="w-full py-3 bg-brand-orange text-white font-bold rounded-xl hover:opacity-90 transition">獲取開課通知</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-[#F8FAFB]">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex justify-between items-end mb-12 border-b pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 relative pb-2">
+                        用戶分享
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-brand-orange rounded-full"></span>
+                    </h2>
+                </div>
+                <div class="text-gray-400 text-sm md:text-base font-medium">
+                    來自本地家長們的真實轉變與好評
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brand-orange mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 text-base leading-relaxed mb-6 font-medium">
+                            「上完正向育兒管教課程之後，我學識咗點樣喺個仔扭計嘅時候先冷靜處理自己嘅情緒。而家同佢嘅對立少咗好多年，親子關係改善咗好多！」
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t pt-4">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=120" alt="陳媽媽" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">陳媽媽</h4>
+                            <p class="text-xs text-gray-400">育有 3 歲兒子</p>
+                            
+                            <p class="text-xs text-brand-green font-bold mt-1"><i class="fas fa-graduation-cap mr-1"></i>已完修：正向育兒樂</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brand-orange mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 text-base leading-relaxed mb-6 font-medium">
+                            「學前概念課程入面嘅實用技巧幫到我好多。透過日常簡單嘅小遊戲就可以啟發到囡囡嘅早期認知發展，等佢可以提早輕鬆適應學前生活。」
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t pt-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120" alt="李爸爸" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">李爸爸</h4>
+                            <p class="text-xs text-gray-400">育有 2 歲女兒</p>
+                            
+                            <p class="text-xs text-brand-green font-bold mt-1"><i class="fas fa-graduation-cap mr-1"></i>已完修：幼兒學前概念</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-brand-orange mb-4 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 text-base leading-relaxed mb-6 font-medium">
+                            「呢個平台嘅線上課程節奏掌握得好好，好適合我呢啲要返工嘅在職媽媽隨時抽空上堂。非常期待之後推出嘅專專注力同語言發展課程！」
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t pt-4">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120" alt="張太太" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">張太太</h4>
+                            <p class="text-xs text-gray-400">育有 5 歲女兒</p>
+                            
+                            <p class="text-xs text-brand-green font-bold mt-1"><i class="fas fa-graduation-cap mr-1"></i>已完修：正向育兒樂</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="media" class="py-20 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="flex justify-between items-end mb-12 border-b pb-4">
+                <div>
+                    <h2 class="text-3xl font-black text-gray-900 relative pb-2">
+                        媒體報道
+                        <span class="absolute bottom-0 left-0 w-12 h-1 bg-brand-orange rounded-full"></span>
+                    </h2>
+                </div>
+                <div class="text-gray-400 text-sm md:text-base font-medium">
+                    各大主流媒體爭相報道及推薦
+                </div>
+            </div>
+
+            <div class="w-full max-w-5xl mx-auto bg-gray-50 rounded-3xl p-8 border border-gray-100 flex justify-center items-center shadow-sm">
+                <img src="media-logos.png" 
+                     alt="慈慧幼苗 Healthy Seed 媒體報道標誌整合" 
+                     class="max-w-full h-auto object-contain" 
+                     onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'text-center text-gray-400 py-12\'><i class=\'far fa-images text-5xl mb-3 text-gray-300\'></i><p class=\'font-bold text-base text-gray-700\'>媒體 Logo 整合圖預留位置</p><p class=\'text-xs mt-1 text-gray-400\'>請上傳名為 <b>media-logos.png</b> 嘅圖片至 GitHub 資料夾</p></div>';">
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#1A1A1A] text-white py-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16">
+            
+            <div class="col-span-1 md:col-span-2">
+                <div class="mb-8">
+                    <img src="HSP_Logo_New_VisualGuid-02.png" 
+                         alt="慈慧幼苗 Healthy Seed" 
+                         class="h-16 md:h-20 w-auto object-contain">
+                </div>
+                <p class="text-gray-500 max-w-md leading-loose font-medium">
+                    專為 0-6 歲孩子的家長打造。致力於提供最貼近本地家庭需求的教養資源，陪伴家長解決育兒痛點。
+                </p>
+            </div>
+            
+            <div class="flex flex-col justify-start md:items-end">
+                <div>
+                    <h4 class="font-black text-lg mb-8 tracking-wider md:text-right">關注我們</h4>
+                    <div class="flex space-x-5">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-2xl flex items-center justify-center hover:bg-brand-green hover:-translate-y-1 transition-all"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs font-bold tracking-widest">
+            &copy; 2026 HEALTHY SEED. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+    
+</body>
+</html>
